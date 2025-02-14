@@ -194,7 +194,7 @@ function App() {
                       timerMode as "focus" | "shortBreak" | "longBreak"
                     )
                   }
-                  className={`px-10 py-2 text-sm font-normal relative z-10 flex items-center gap-2 ${
+                  className={`px-10 py-2 text-sm font-normal relative z-10 flex items-center gap-2 cursor-pointer ${
                     mode === timerMode
                       ? "text-white"
                       : "text-neutral-600 hover:text-neutral-900"
@@ -285,7 +285,7 @@ function App() {
                     }}
                     whileTap={{ scale: 0.985 }}
                     onClick={toggleTimer}
-                    className="w-full bg-red-800 text-white px-8 py-4 rounded-none font-normal text-base flex items-center justify-center gap-2"
+                    className="w-full bg-red-800 text-white px-8 py-4 rounded-none font-normal text-base flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Pause size={20} weight="light" />
                     <span>Pause</span>
@@ -335,7 +335,7 @@ function App() {
               }}
               whileTap={{ scale: 0.985 }}
               onClick={resetTimer}
-              className="w-full bg-white text-neutral-900 px-8 py-4 rounded-none font-normal text-base border border-neutral-200 flex items-center justify-center gap-2"
+              className="w-full bg-white text-neutral-900 px-8 py-4 rounded-none font-normal text-base border border-neutral-200 flex items-center justify-center gap-2 cursor-pointer"
             >
               <ArrowCounterClockwise size={20} weight="light" />
               <span>Reset</span>
