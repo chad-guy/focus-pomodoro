@@ -12,11 +12,14 @@ function App() {
   );
 
   // Timer durations (in minutes)
-  const TIMER_MODES = {
-    focus: 25,
-    shortBreak: 5,
-    longBreak: 15,
-  };
+  const TIMER_MODES = React.useMemo(
+    () => ({
+      focus: 25,
+      shortBreak: 5,
+      longBreak: 15,
+    }),
+    []
+  );
 
   // Add this right after your TIMER_MODES constant
   const [backgroundDimensions, setBackgroundDimensions] = React.useState({
@@ -63,7 +66,15 @@ function App() {
     }
 
     return () => clearInterval(interval);
-  }, [isActive, minutes, seconds, mode]);
+  }, [
+    isActive,
+    minutes,
+    seconds,
+    mode,
+    backgroundDimensions,
+    buttonRefs,
+    TIMER_MODES,
+  ]);
 
   const toggleTimer = () => {
     setIsActive(!isActive);
