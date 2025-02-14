@@ -307,7 +307,7 @@ function App() {
                     }}
                     whileTap={{ scale: 0.985 }}
                     onClick={toggleTimer}
-                    className="w-full bg-neutral-900 text-white px-8 py-4 rounded-none font-normal text-base flex items-center justify-center gap-2"
+                    className="w-full bg-neutral-900 text-white px-8 py-4 rounded-none font-normal text-base flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Play size={20} weight="light" />
                     <span>Start</span>
